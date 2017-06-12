@@ -1,7 +1,7 @@
 {% set name = "asap" %}
-{% set version = "3.10.0" %}
+{% set version = "3.10.6" %}
 {% set sha256 = "9018d26030fa34e84a0404dd3292973a6067a7a90528531a33b8584b5fdc52b1" %}
-{% set asap_version = "3_10_0" %}
+{% set asap_version = "3_10_6" %}
 
 package:
   name: {{ name|lower }}
