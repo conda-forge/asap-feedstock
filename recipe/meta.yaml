@@ -1,14 +1,14 @@
 {% set name = "asap" %}
-{% set version = "3.10.0" %}
-{% set sha256 = "d58105290029385835569e1e7057d7b03bad1dd0c5efc2151370e77f7721f478" %}
-{% set asap_version = "3_10_0" %}
+{% set version = "3.10.6" %}
+{% set sha256 = "9018d26030fa34e84a0404dd3292973a6067a7a90528531a33b8584b5fdc52b1" %}
+{% set asap_version = "3_10_6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-ASAP_VERSION_{{ asap_version}}-a78278070c997b302c8117d8174c8914d5f3d273.tar.gz
+  fn: {{ name }}-ASAP_VERSION_{{ asap_version}}-afc2473cfb8cf89b5e88189e0fdffa0f40d3efc7.tar.gz
   url: https://gitlab.com/{{ name }}/{{ name }}/repository/archive.tar.gz?ref=ASAP_VERSION_{{ asap_version }}
   sha256: {{ sha256 }}
 
