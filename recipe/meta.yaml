@@ -9,7 +9,7 @@ package:
 
 source:
   fn: asap3-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/asap3/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/asap3/asap3-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
