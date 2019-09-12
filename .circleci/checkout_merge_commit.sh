@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -o xtrace
 
 # Update PR refs for testing.
 if [[ -n "${CIRCLE_PR_NUMBER}" ]]
