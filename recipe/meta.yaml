@@ -1,15 +1,15 @@
 {% set name = "asap" %}
-{% set version = "3.11.0" %}
+{% set version = "3.11.10" %}
 {% set sha256 = "da1b9bb8cde76cf9010921dfd765acf8e7488ae60e5e57c62ec390a178c89261" %}
-{% set asap_version = "3_11_0" %}
+{% set asap_version = "3_11_10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-ASAP_VERSION_{{ asap_version}}-afc2473cfb8cf89b5e88189e0fdffa0f40d3efc7.tar.gz
-  url: https://gitlab.com/{{ name }}/{{ name }}/repository/archive.tar.gz?ref=ASAP_VERSION_{{ asap_version }}
+  fn: asap3-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/asap3/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
