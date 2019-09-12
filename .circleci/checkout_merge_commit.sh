@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -o xtrace
-
 # Update PR refs for testing.
 if [[ -n "${CIRCLE_PR_NUMBER}" ]]
 then
@@ -12,6 +10,7 @@ fi
 # Retrieve the refs.
 if [[ -n "${CIRCLE_PR_NUMBER}" ]]
 then
+    echo ${FETCH_REFS}
     git fetch -u origin ${FETCH_REFS}
 fi
 
