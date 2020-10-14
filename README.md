@@ -1,9 +1,9 @@
 About asap
 ==========
 
-Home: https://gitlab.com/asap/asap
+Home: https://pypi.org/project/asap3
 
-Package license: GPL-3.0-only | LGPL-3.0-only
+Package license: LGPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/asap-feedstock/blob/master/LICENSE.txt)
 
@@ -11,12 +11,13 @@ Summary: ASAP is a calculator for doing large-scale molecular dynamics (MD) with
 
 Development: https://gitlab.com/asap/asap
 
-Documentation: https://wiki.fysik.dtu.dk/asap/asap
+Documentation: https://wiki.fysik.dtu.dk/asap
 
-ASAP is a calculator for doing large-scale molecular dynamics (MD) within
-the Atomic Simulation Environment. The focus of ASAP is on solid-state
-physics (as opposed to molecular chemistry), and in particular metallic
-systems.
+ASAP (Atomic SimulAtion Program or As Soon As Possible) is a
+package for large-scale molecular dynamics within the Atomic
+Simulation Environment (ASE).  It implements a number of 'classical'
+potentials, most importantly the Effective Medium Theory, and also the
+mechanisms for domain-decomposition of the atoms.
 
 
 Current build status
@@ -178,5 +179,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@Anthchirp](https://github.com/Anthchirp/)
 * [@CJ-Wright](https://github.com/CJ-Wright/)
 
