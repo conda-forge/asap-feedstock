@@ -32,7 +32,7 @@ test:
     - asap3
 
 about:
-  home: https://gitlab.com/asap/asap
+  home: https://pypi.org/project/asap3
   license: LGPL-3.0-only
   license_file:
     - LICENSE
@@ -51,4 +51,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - Anthchirp
     - CJ-Wright
