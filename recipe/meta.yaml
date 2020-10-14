@@ -41,12 +41,13 @@ about:
   within the Atomic Simulation Environment.'
 
   description: |
-    ASAP is a calculator for doing large-scale molecular dynamics (MD) within
-    the Atomic Simulation Environment. The focus of ASAP is on solid-state
-    physics (as opposed to molecular chemistry), and in particular metallic
-    systems.
+    ASAP (Atomic SimulAtion Program or As Soon As Possible) is a
+    package for large-scale molecular dynamics within the Atomic
+    Simulation Environment (ASE).  It implements a number of 'classical'
+    potentials, most importantly the Effective Medium Theory, and also the
+    mechanisms for domain-decomposition of the atoms.
 
-  doc_url: https://wiki.fysik.dtu.dk/asap/asap
+  doc_url: https://wiki.fysik.dtu.dk/asap
   dev_url: https://gitlab.com/asap/asap
 
 extra:
