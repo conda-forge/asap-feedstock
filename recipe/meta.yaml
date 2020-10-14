@@ -8,13 +8,13 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-ASAP_VERSION_{{ asap_version}}-afc2473cfb8cf89b5e88189e0fdffa0f40d3efc7.tar.gz
+  fn: {{ name }}-ASAP_VERSION_{{ asap_version }}-afc2473cfb8cf89b5e88189e0fdffa0f40d3efc7.tar.gz
   url: https://gitlab.com/{{ name }}/{{ name }}/repository/archive.tar.gz?ref=ASAP_VERSION_{{ asap_version }}
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py install
+  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: True  # [win]
 
 requirements:
