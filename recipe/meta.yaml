@@ -1,20 +1,17 @@
 {% set name = "asap" %}
-{% set version = "3.10.6" %}
-{% set sha256 = "9018d26030fa34e84a0404dd3292973a6067a7a90528531a33b8584b5fdc52b1" %}
-{% set asap_version = "3_10_6" %}
+{% set version = "3.11.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-ASAP_VERSION_{{ asap_version}}-afc2473cfb8cf89b5e88189e0fdffa0f40d3efc7.tar.gz
-  url: https://gitlab.com/{{ name }}/{{ name }}/repository/archive.tar.gz?ref=ASAP_VERSION_{{ asap_version }}
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/asap3/asap3-{{ version }}.tar.gz
+  sha256: da1b9bb8cde76cf9010921dfd765acf8e7488ae60e5e57c62ec390a178c89261
 
 build:
-  number: 0
-  script: python setup.py install
+  number: 1
+  script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [win]
 
 requirements:
@@ -22,33 +19,37 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python
     - numpy
+    - pip
+    - python
   run:
+    - ase
     - python
     - {{ pin_compatible('numpy') }}
-    - ase
 
 test:
   imports:
     - asap3
 
 about:
-  home: https://gitlab.com/asap/asap
-  license: GPL-3.0
-  license_file: LICENSE
+  home: https://pypi.org/project/asap3
+  license: LGPL-3.0-only
+  license_file:
+    - LICENSE
+    - LICENSE.LESSER
   summary: 'ASAP is a calculator for doing large-scale molecular dynamics (MD)
   within the Atomic Simulation Environment.'
 
   description: |
-    ASAP is a calculator for doing large-scale molecular dynamics (MD) within
-    the Atomic Simulation Environment. The focus of ASAP is on solid-state
-    physics (as opposed to molecular chemistry), and in particular metallic
-    systems.
+    ASAP (Atomic SimulAtion Program or As Soon As Possible) is a
+    package for large-scale molecular dynamics within the Atomic
+    Simulation Environment (ASE).  It implements a number of 'classical'
+    potentials, most importantly the Effective Medium Theory, and also the
+    mechanisms for domain-decomposition of the atoms.
 
-  doc_url: https://wiki.fysik.dtu.dk/asap/asap
+  doc_url: https://wiki.fysik.dtu.dk/asap
   dev_url: https://gitlab.com/asap/asap
 
 extra:
   recipe-maintainers:
-    - CJ-Wright
+    - Anthchirp
