@@ -1,5 +1,5 @@
 {% set name = "asap" %}
-{% set version = "3.11.10" %}
+{% set version = "3.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/asap3/asap3-{{ version }}.tar.gz
-  sha256: da1b9bb8cde76cf9010921dfd765acf8e7488ae60e5e57c62ec390a178c89261
+  sha256: 6852d7b3f668b8f740f1be7a0b8ead6b831cb1c381b02448e3e9a578d9efb182
 
 build:
-  number: 3
-  script: "{{ PYTHON }} -m pip install . -vv"
-  skip: True  # [win]
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [win]
 
 requirements:
   build:
@@ -37,8 +37,7 @@ about:
   license_file:
     - LICENSE
     - LICENSE.LESSER
-  summary: 'ASAP is a calculator for doing large-scale molecular dynamics (MD)
-  within the Atomic Simulation Environment.'
+  summary: ASAP is a calculator for doing large-scale molecular dynamics (MD) within the Atomic Simulation Environment.
 
   description: |
     ASAP (Atomic SimulAtion Program or As Soon As Possible) is a
